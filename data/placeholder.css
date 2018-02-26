@@ -1,0 +1,10 @@
+img.EIB_reject_placeholder {
+    border-width: thin;
+    border-color: #cccccc;
+/*    border-color: #ff0000;  // テスト用*/
+    border-style: solid;
+    /*background-color: #eeeeee;*/
+    /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAGPSURBVDhPnZPLasJAFIZDH6O7Pka3fYzu+xBduXDhFfGKGm+JSQQtjS4URReKLrxAFyqEioEI7oubFiGX0zmnVohUWjvwQ86c+b/5Z4ZwjuOI/9Qjh8OyLFitVhfJMAxggD4BTNOE6XT6J+m6Duv1GhaLxeWA2WwGm82Gdl8ul+cB4/EYJpOJaw41HA5J2D+bAJvVahVardYRMhqNqK5UKpBMJiEUCkGtVoP9fu8GoKFer0OpVCJ1u10yowaDAXQ6HQLl83kIBAKQSqVePR7PFQHQ3Gw2ySgIwlGNRoNAvV6P+t+pMCVCfD7fPQFw0am5UChAuVym2DzPU19VVYLM53OIxWIIeebYWUAURZcZlcvlIB6PQyaTgWw2C4lEAoLBIK1tt9sgSRIC+gQ4NaMwAcbEBFgXi0W6QITgEcLhMPj9fomzbdvc7XY/SpZlGw2apjlYb7dbMxqN0tzhDu7wX7g+J0VRbtnCN2aw0un0CzvWUyQS+UAzE0/P+Nvwer03bCeFxX0/GDX2/fDV5bhPcS2Ny9cKGU8AAAAASUVORK5CYII=);*/
+    background-repeat: no-repeat;
+    min-width: 64px;
+    height: 24px;}

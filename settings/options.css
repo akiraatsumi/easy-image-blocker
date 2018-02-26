@@ -1,0 +1,36 @@
+td {
+    border-top: 1px #cccccc solid;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    padding: 4px 0 4px 0;
+    font-family: "Segoe UI", sans-serif;
+}
+input, button, select {
+    font-size: 1.0em;
+    color: #0c0c0d;
+}
+
+div.title {
+    padding-left: 6px;
+    font-size: 1.0em;
+    color: #0c0c0d;
+}
+.description {
+    padding-left: 6px;
+    font-size: 0.9em;
+    color: #737373;
+}
+
+.file {
+    display: none;
+}
+
+.box {
+    border: 1px #cccccc solid;
+    padding: 4px 6px 4px 4px;
+    font-family: "Segoe UI", sans-serif;
+}
+.noborder {
+    border: 0;
+}

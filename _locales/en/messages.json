@@ -1,0 +1,194 @@
+{
+  "btn_allblocks_title": {
+    "message": "Load no images"
+  },
+  "btn_cacheonly_title": {
+    "message": "Load images you have read"
+  },
+  "btn_thissite_title": {
+    "message": "Load images on this site only"
+  },
+  "btn_allload_title": {
+    "message": "Load all images"
+  },
+  "input_field_title": {
+    "message": "Enter a url for the White-list Table Below"
+  },
+  "input_field_url_title": {
+    "message": "Change url pattern."
+  },
+  "input_field_add_title": {
+    "message": "Add the White-list Table Below."
+  },
+  "mode_title": {
+    "message": "Initial operation mode"
+  },
+  "mode_description": {
+    "message": "Operation mode of the new tab."
+  },
+  "whitelist_title": {
+    "message": ""
+  },
+  "whitelist_description": {
+    "message": ""
+  },
+  "whitelist_mode_title": {
+    "message": ""
+  },
+  "whitelist_mode_description": {
+    "message": ""
+  },
+  "reload_load_title": {
+    "message": "Reload page when load image"
+  },
+  "reload_load_description": {
+    "message": "Reload page when load image by context menu."
+  },
+  "reload_mode_title": {
+    "message": "Reload page when mode changed."
+  },
+  "reload_mode_description": {
+    "message": "Reload page when change mode by tool button."
+  },
+  "access_key_title": {
+    "message": "Access key of context menu."
+  },
+  "access_key_description": {
+    "message": "You specify the access key of context menu."
+  },
+  "access_key_all_title": {
+    "message": "Access key of context menu 'Load all images'."
+  },
+  "access_key_all_description": {
+    "message": "You specify the access key of context menu 'Load all images'."
+  },
+  "placeholder_type_title": {
+    "message": "Placeholder type."
+  },
+  "placeholder_type_description": {
+    "message": ""
+  },
+  "alt_placeholder_text_title": {
+    "message": "Placeholder ALT text when blocked image."
+  },
+  "alt_placeholder_text_description": {
+    "message": "Text to be displayed instead when you block the image."
+  },
+  "tab_independent_title": {
+    "message": "Each tab have the mode of independently."
+  },
+  "tab_independent_description": {
+    "message": ""
+  },
+  "tab_mode_take_over_title": {
+    "message": "Take over the mode from current tab."
+  },
+  "tab_mode_take_over_description": {
+    "message": "The mode of new tab will as same as the mode of current tab."
+  },
+  "css_block_title": {
+    "message": "CSS block mode"
+  },
+  "css_block_description": {
+    "message": "Control:Control the images from css files.(but little heavy)"
+  },
+  "context_hideimage": {
+    "message": "Hide Image"
+  },
+  "context_hideallimage": {
+    "message": "Hide all images"
+  },
+  "context_loadimage": {
+    "message": "Load Image"
+  },
+  "context_loadallimages": {
+    "message": "Load All Images"
+  },
+  "mode_string_all_block": {
+    "message": "All blocks\n(ctrl+click then modeup)"
+  },
+  "mode_string_cache": {
+    "message": "Load cached images only"
+  },
+  "mode_string_this_site": {
+    "message": "Load images on this site only"
+  },
+  "mode_string_load_all": {
+    "message": "Load all images"
+  },
+  "restart_dialog_title": {
+    "message": "Easy Image Blocker Notification:"
+  },
+  "restart_dialog_text": {
+    "message": "Please restart the firefox to enable the new EasyImageBlocker."
+  },
+  "textInputPlaceHolder": {
+    "message": "Enter a url for the White-list Table Below"
+  },
+  "export_dialog_overwrite": {
+    "message": "is already exist. Do you really want to overwrite?"
+  },
+  "import_dialog_overwrite": {
+    "message": "Do you really want to overwrite the whitelist?"
+  },
+  "white_import_export_title": {
+    "message": "Import/Export"
+  },
+  "white_import_export_description": {
+    "message": "Import/Export white list"
+  },
+  "white_import_description": {
+    "message": "The current setting will be overwritten."
+  },
+  "white_export_description": {
+    "message": "Save settings in JSON format."
+  },
+  "context_menu_hide_title": {
+    "message": "Hide context menu extension."
+  },
+  "context_menu_hide_description": {
+    "message": "Do not add items to the context menu."
+  },
+  "need_restart_firefox" : {
+    "message": "(need restart Firefox)"
+  },
+  "cache_expire_seconds_title": {
+    "message": "Seconds of image cache expired."
+  },
+  "cache_expire_seconds_description": {
+    "message": ""
+  },
+  "shortcut_mode_title": {
+    "message": "Shortcut keys."
+  },
+  "shortcut_mode_description": {
+    "message": "Shortcut keys for the mode change.<br>You can specify only the shift key for the second function key.<br>Specify a blank to prevent action.<br>Changes are enable when page load."
+  },
+  "shortcut_mode_next_description": {
+    "message": "to next"
+  },
+  "shortcut_mode_0_description": {
+    "message": "no images"
+  },
+  "shortcut_mode_1_description": {
+    "message": "have read"
+  },
+  "shortcut_mode_2_description": {
+    "message": "this site"
+  },
+  "shortcut_mode_3_description": {
+    "message": "all images"
+  },
+  "seconds": {
+    "message": "seconds"
+  },
+  "apply": {
+    "message": "Apply"
+  },
+  "import": {
+    "message": "Import"
+  },
+  "export": {
+    "message": "Export"
+  }
+}

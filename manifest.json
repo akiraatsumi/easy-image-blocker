@@ -1,0 +1,63 @@
+{
+  "manifest_version": 2,
+  "name": "EasyImageBlocker",
+  "version": "3.1.0",
+  "description": "Easy Image Blocker is the Add-on to control the loading of the image. Images can be load from the context menu individually. You can specify the mode to load the image for each URL in the white list.",
+  "default_locale": "en",
+
+  "applications": {
+    "gecko": {
+      "id": "@easyimageblocker"
+    }
+  },
+
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+
+  "icons": {
+    "48": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "run_at": "document_end", // document_startだとimages[]が揃わないのでNG
+      "js": ["components/debug.js", "components/content_script.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "components/debug.js",
+      "components/blockedimage.js",
+      "components/modemanage.js",
+      "components/cachecontrol.js",
+      "components/options.js",
+      "components/onmessage.js",
+      "components/tabmanage.js",
+      "components/contextmenu.js",
+      "components/browseraction.js",
+      "components/background.js"
+    ]
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/icon32_allload.png",
+    "default_title": "__MSG_mode_string_load_all__",
+    "default_popup": "popup/popup.html"
+  },
+
+  "options_ui": {
+    "browser_style": false,
+    "page": "settings/options.html"
+  }
+
+}

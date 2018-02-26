@@ -1,0 +1,201 @@
+body {
+    width: 384px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    overflow: hidden;
+    user-select: none;
+    background-color: #EEE;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+/*a {*/
+    /*white-space: normal;*/
+/*}*/
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+body>* {
+    width: 100%;
+}
+
+tr {
+    background-color: #FFF;
+    /*outline: solid 1px rgb(211, 211, 211);*/
+}
+
+tr td {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 20px;
+    border-width: 0;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+}
+
+/* Whiteリストの中身(URL) */
+tr td[type='item'] {
+    width: 285px;
+    display: block;
+    font-size: 12px;
+    overflow: hidden;
+    padding-left: 0;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Whiteリストの×ボタン */
+tr td[type='close'] {
+    width: 30px;
+    cursor: pointer;
+    background: url('img/close.png') no-repeat center center;
+}
+tr td[type='close'][mode="0"] {
+    background: url('../icons/icon16_loadnothing.png') no-repeat center center;
+}
+tr td[type='close'][mode="1"] {
+    background: url('../icons/icon16_loadcache.png') no-repeat center center;
+}
+tr td[type='close'][mode="2"] {
+    background: url('../icons/icon16_loadsite.png') no-repeat center center;
+}
+tr td[type='close'][mode="3"] {
+    background: url('../icons/icon16_loadall.png') no-repeat center center;
+}
+tr td[type='close']:hover {
+    background: url('img/close-red.png') no-repeat center center;
+}
+
+tr td[type='selection'] {
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr td[type='selection']:hover,
+tr td[type='selection'][mode='selected']:hover {
+    color: white;
+    background-color: #0E8E4E;
+}
+
+tr td[type='selection'][mode='selected'] {
+    color: white;
+    background-color: #0f9d58;
+}
+
+/* URL入力欄 */
+input {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+#website-list {
+    height: 400px;
+    overflow: auto;
+    display: block;
+    min-height: 400px;
+    max-height: 400px;
+}
+
+#website-list-table {
+    padding: 1px 5px;
+    border-spacing: 0 0;
+}
+
+/* 入力欄の行の上、右、下、左スペース */
+#input-table {
+    padding: 6px 2px 4px 2px;
+    border-spacing: 0 0;  /* 入力欄と＋ボタンの隙間 */
+}
+
+#input-table tr {
+    outline: none;
+}
+
+#input-field {
+    border: 0;
+    margin: 0;
+    padding: 0 0 0 0;
+    height: 30px;
+    text-indent: 0;
+}
+
+#input-field-td {
+    border: solid 1px #D7D7D7;
+    padding: 0 4px 0 4px;
+}
+
+#input-field-add {
+    width: 47px;
+    height: 30px;
+    cursor: pointer;
+    background: #14c5ff url('img/add.png') no-repeat center center;
+}
+
+#input-field-add:hover {
+    background: #5199ff url('img/add.png') no-repeat center center;
+}
+
+#input-field-url {
+    width: 16px;
+    cursor: pointer;
+    background: #72CD72 url('img/alternative.png') no-repeat center center;
+}
+
+#input-field-2px {
+    width: 2px;
+    background: #eee;
+}
+
+#table-modes {
+    height: 34px;
+    margin: 4px 0 0 0;
+    table-layout: fixed;
+    border-spacing: 2px 0;
+    border-collapse: separate;
+}
+
+#btn_allblocks {
+    width: 38px;
+    background: url('img/icon32_loadnothing.png') no-repeat center center;
+    background-size: 32px;
+}
+
+#btn_thissite {
+    width: 38px;
+    background: url('img/icon32_thissite.png') no-repeat center center;
+    background-size: 32px;
+}
+
+#btn_cacheonly {
+    width: 38px;
+    background: url('img/icon32_cacheonly.png') no-repeat center center;
+    background-size: 32px;
+}
+
+#btn_allload {
+    width: 38px;
+    background: url('img/icon32_allload.png') no-repeat center center;
+    background-size: 32px;
+}
+
+#btn_allblocks:hover, #btn_thissite:hover, #btn_cacheonly:hover, #btn_allload:hover {
+    background-color: #cbe2e1;
+}
+#btn_allblocks[mode='selected'],#btn_thissite[mode='selected'],#btn_cacheonly[mode='selected'],#btn_allload[mode='selected']{
+    background-color: #cbe2e1;
+}

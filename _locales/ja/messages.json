@@ -1,0 +1,194 @@
+{
+  "btn_allblocks_title": {
+    "message": "全てブロック"
+  },
+  "btn_cacheonly_title": {
+    "message": "キャッシュのみ読み込み"
+  },
+  "btn_thissite_title": {
+    "message": "外部の画像はブロック"
+  },
+  "btn_allload_title": {
+    "message": "全読み込み"
+  },
+  "input_field_title": {
+    "message": "ホワイトリストに追加するURL"
+  },
+  "input_field_url_title": {
+    "message": "URLのパターン切り替え"
+  },
+  "input_field_add_title": {
+    "message": "追加"
+  },
+  "mode_title": {
+    "message": "初期モード"
+  },
+  "mode_description": {
+    "message": "起動時の動作モード"
+  },
+  "whitelist_title": {
+    "message": "ホワイトリスト"
+  },
+  "whitelist_description": {
+    "message": "画像をロードしたいページのURLをカンマ区切りで指定"
+  },
+  "whitelist_mode_title": {
+    "message": "ホワイトリストの動作モード"
+  },
+  "whitelist_mode_description": {
+    "message": "ホワイトリストの各URL毎のモード(ver.2.0.0以降)"
+  },
+  "reload_load_title": {
+    "message": "画像読み込み時再読込"
+  },
+  "reload_load_description": {
+    "message": "コンテキストメニューでLoadされたらページをリロードする"
+  },
+  "reload_mode_title": {
+    "message": "モード変更時再読込"
+  },
+  "reload_mode_description": {
+    "message": "モードが変更されたらページをリロードする"
+  },
+  "access_key_title": {
+    "message": "アクセスキー"
+  },
+  "access_key_description": {
+    "message": "コンテキストメニューのショートカットキー（Firefoxの再起動が必要）"
+  },
+  "access_key_all_title": {
+    "message": "全画像読み込みアクセスキー"
+  },
+  "access_key_all_description": {
+    "message": "「全画像読み込み」コンテキストメニューのショートカットキー（Firefoxの再起動が必要）"
+  },
+  "placeholder_type_title": {
+    "message": "プレイスホルダー"
+  },
+  "placeholder_type_description": {
+    "message": "イメージをブロックした際に代わりに表示する方式"
+  },
+  "alt_placeholder_text_title": {
+    "message": "ALT文字列"
+  },
+  "alt_placeholder_text_description": {
+    "message": "イメージをブロックした際に代わりに表示するテキスト"
+  },
+  "tab_independent_title": {
+    "message": "タブ独立モード"
+  },
+  "tab_independent_description": {
+    "message": "各タブで独立してモードを持たせる"
+  },
+  "tab_mode_take_over_title": {
+    "message": "新タブ動作モード"
+  },
+  "tab_mode_take_over_description": {
+    "message": "各タブの初期値を現在のタブから引き継ぐ"
+  },
+  "css_block_title": {
+    "message": "CSS画像抑制モード"
+  },
+  "css_block_description": {
+    "message": "Control:制御する\nBlock:全てブロック\nNone:全て読み込む\n（Controlは処理が重い時があります）"
+  },
+  "context_hideimage": {
+    "message": "画像非表示"
+  },
+  "context_hideallimage": {
+    "message": "全画像非表示"
+  },
+  "context_loadimage": {
+    "message": "画像読み込み"
+  },
+  "context_loadallimages": {
+    "message": "全画像読み込み"
+  },
+  "mode_string_all_block": {
+    "message": "全てブロック\n(ctrl+クリックでモードUp)"
+  },
+  "mode_string_cache": {
+    "message": "キャッシュのみ読み込み"
+  },
+  "mode_string_this_site": {
+    "message": "外部の画像はブロック"
+  },
+  "mode_string_load_all": {
+    "message": "全読み込み"
+  },
+  "restart_dialog_title": {
+    "message": "Easy Image Blockerからのお知らせ:"
+  },
+  "restart_dialog_text": {
+    "message": "新しいEasyImageBlockerを有効にするために、Firefoxを再起動してください。"
+  },
+  "textInputPlaceHolder": {
+    "message": "ホワイトリストに追加するURLを入力てください"
+  },
+  "export_dialog_overwrite": {
+    "message": "は既に存在します。上書きしますか?"
+  },
+  "import_dialog_overwrite": {
+    "message": "ホワイトリストを上書きします。よろしいですか?"
+  },
+  "white_import_export_title": {
+    "message": "インポート/エキスポート"
+  },
+  "white_import_export_description": {
+    "message": "ホワイトリストのインポート/エキスポート"
+  },
+  "white_import_description": {
+    "message": "現在の設定は上書きされます"
+  },
+  "white_export_description": {
+    "message": "設定をJSON形式で保存します"
+  },
+  "context_menu_hide_title": {
+    "message": "コンテキストメニューに追加しない"
+  },
+  "context_menu_hide_description": {
+    "message": "コンテキストメニューに拡張項目を追加しない"
+  },
+  "need_restart_firefox" : {
+    "message": "(Firefoxの再起動が必要)"
+  },
+  "cache_expire_seconds_title": {
+    "message": "キャッシュの寿命"
+  },
+  "cache_expire_seconds_description": {
+    "message": ""
+  },
+  "shortcut_mode_title": {
+    "message": "ショートカットキー"
+  },
+  "shortcut_mode_description": {
+    "message": "モード変更のショートカットキーの指定。<br>2番目の機能キーはシフトのみ指定可能です。<br>何も指定しないと無効になります。<br>ページ読み込み時に変更が反映されます。"
+  },
+  "shortcut_mode_next_description": {
+    "message": "次へ"
+  },
+  "shortcut_mode_0_description": {
+    "message": "全ブロック"
+  },
+  "shortcut_mode_1_description": {
+    "message": "キャッシュ"
+  },
+  "shortcut_mode_2_description": {
+    "message": "当サイト"
+  },
+  "shortcut_mode_3_description": {
+    "message": "全て読む"
+  },
+  "seconds": {
+    "message": "秒"
+  },
+  "apply": {
+    "message": "適用"
+  },
+  "import": {
+    "message": "インポート"
+  },
+  "export": {
+    "message": "エキスポート"
+  }
+}

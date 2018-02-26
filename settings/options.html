@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Image Blocker Settings</title>
+    <link rel="stylesheet" type="text/css" href="options.css"/>
+</head>
+<body>
+    <form>
+        <table border="0">
+            <!--インポート/エキスポート-->
+            <tr>
+                <td>
+                    <div data-i18n="white_import_export_title" class="title"></div>
+                    <div data-i18n="white_import_export_description" class="description"></div>
+                </td>
+                <td class="body">
+                    <input id="import" type="file" accept="application/json" class="file">
+                    <button id="btnImport"><span data-i18n="import"></span></button>
+                    &nbsp;
+                    <!--<input id="export" type="file" accept="application/json" class="file">-->
+                    <button id="btnExport"><span data-i18n="export"></span></button>
+                </td>
+            </tr>
+            <!--モードの初期値-->
+            <tr>
+                <td width="50%">
+                    <div data-i18n="mode_title" class="title"></div>
+                    <div data-i18n="mode_description" class="description"></div>
+                </td>
+                <td width="50%">
+                    <select id="mode">
+                        <option value="0" data-i18n="btn_allblocks_title"></option>
+                        <option value="1" data-i18n="btn_cacheonly_title"></option>
+                        <option value="2" data-i18n="btn_thissite_title"></option>
+                        <option value="3" data-i18n="btn_allload_title"></option>
+                    </select>
+                </td>
+            </tr>
+            <!--モード変更時のページリロード可否ー-->
+            <tr>
+                <td>
+                    <div data-i18n="reload_mode_title" class="title"></div>
+                    <div data-i18n="reload_mode_description" class="description"></div>
+                </td>
+                <td><input type="checkbox" id="reload_mode"></td>
+            </tr>
+            <!--コンテキストメニューのアクセスキー-->
+            <!--not yet implemented for the Webextensions at 2017/7/2.-->
+            <tr style="display: none">
+                <td>
+                    <div data-i18n="access_key_title" class="title"></div>
+                    <div data-i18n="access_key_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="text" id="access_key" maxlength="1" size="1">
+                    <span data-i18n="need_restart_firefox" class="description"></span>
+                </td>
+            </tr>
+            <!--コンテキストメニューのアクセスキー-->
+            <!--not yet implemented for the Webextensions at 2017/7/2.-->
+            <tr style="display: none">
+                <td>
+                    <div data-i18n="access_key_all_title" class="title"></div>
+                    <div data-i18n="access_key_all_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="text" id="access_key_all" maxlength="1" size="1">
+                    <span data-i18n="need_restart_firefox" class="description"></span>
+                </td>
+            </tr>
+            <!--Place Holder type-->
+            <tr>
+                <td>
+                    <div data-i18n="placeholder_type_title" class="title"></div>
+                    <div data-i18n="placeholder_type_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="radio" name="placeholder_type" id="placeholder_type_0" value="0">None
+                    <input type="radio" name="placeholder_type" id="placeholder_type_1" value="1">ALT String
+                </td>
+            </tr>
+            <!--Place Holder text-->
+            <tr>
+                <td>
+                    <div data-i18n="alt_placeholder_text_title" class="title"></div>
+                    <div data-i18n="alt_placeholder_text_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="text" id="alt_placeholder_text">
+                </td>
+            </tr>
+            <!--Each tab mode-->
+            <tr>
+                <td>
+                    <div data-i18n="tab_independent_title" class="title"></div>
+                    <div data-i18n="tab_independent_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="checkbox" id="tab_independent">
+                </td>
+            </tr>
+            <!--Take over tab mode-->
+            <tr>
+                <td>
+                    <div data-i18n="tab_mode_take_over_title" class="title"></div>
+                    <div data-i18n="tab_mode_take_over_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="checkbox" id="tab_mode_take_over">
+                </td>
+            </tr>
+            <!--Hide context menu extension-->
+            <tr>
+                <td>
+                    <div data-i18n="context_menu_hide_title" class="title"></div>
+                    <div data-i18n="context_menu_hide_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="checkbox" id="context_menu_hide">
+                </td>
+            </tr>
+            <!--Cache expire seconds-->
+            <tr>
+                <td>
+                    <div data-i18n="cache_expire_seconds_title" class="title"></div>
+                    <div data-i18n="cache_expire_seconds_description" class="description"></div>
+                </td>
+                <td>
+                    <input type="text" id="cache_expire_seconds" size="8" style="text-align: right;">
+                    <span data-i18n="seconds" class="description"></span>
+                </td>
+            </tr>
+            <!-- Shortcut keys -->
+            <tr>
+                <td valign="top">
+                    <div data-i18n="shortcut_mode_title" class="title"></div>
+                    <div data-i18n="shortcut_mode_description" class="description"></div>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td class="box">
+                                <input type="radio" name="shortcut_mode_1st" id="shortcut_mode_1st_0" value="0">Ctrl
+                                <input type="radio" name="shortcut_mode_1st" id="shortcut_mode_1st_1" value="1">Alt
+                            </td>
+                            <td class="noborder">
+                                + <input type="checkbox" id="shortcut_mode_2nd">Shift
+                            </td>
+                            <td class="noborder">
+                                + <input style="text-transform:capitalize;" type="text" id="shortcut_mode_next" size="1" maxlength="1">
+                            </td>
+                            <td class="noborder">
+                                <div data-i18n="shortcut_mode_next_description" class="description"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noborder"></td><td class="noborder"></td>
+                            <td class="noborder">
+                                + <input style="text-transform:capitalize;" type="text" id="shortcut_mode_0" size="1" maxlength="1">
+                            </td>
+                            <td class="noborder">
+                                <div data-i18n="shortcut_mode_0_description" class="description"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noborder"></td><td class="noborder"></td>
+                            <td class="noborder">
+                                + <input style="text-transform:capitalize;" type="text" id="shortcut_mode_1" size="1" maxlength="1">
+                            </td>
+                            <td class="noborder">
+                                <div data-i18n="shortcut_mode_1_description" class="description"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noborder"></td><td class="noborder"></td>
+                            <td class="noborder">
+                                + <input style="text-transform:capitalize;" type="text" id="shortcut_mode_2" size="1" maxlength="1">
+                            </td>
+                            <td class="noborder">
+                                <div data-i18n="shortcut_mode_2_description" class="description"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noborder"></td><td class="noborder"></td>
+                            <td class="noborder">
+                                + <input style="text-transform:capitalize;" type="text" id="shortcut_mode_3" size="1" maxlength="1">
+                            </td>
+                            <td class="noborder">
+                                <div data-i18n="shortcut_mode_3_description" class="description"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Apply button -->
+            <tr>
+                <td>
+                    <!-- white list -->
+                    <input type="hidden" id="whitelist">
+                    <input type="hidden" id="whitelist_mode">
+                </td>
+                <td align="right"><button type="submit"><span data-i18n="apply"></span></button></td>
+            </tr>
+
+
+        </table>
+    </form>
+
+    <script src="Sanitizer.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
