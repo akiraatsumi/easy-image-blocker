@@ -95,6 +95,7 @@ function saveOptions(e) {
         tab_independent: document.querySelector("#tab_independent").checked,
         tab_mode_take_over: document.querySelector("#tab_mode_take_over").checked,
         context_menu_hide: document.querySelector("#context_menu_hide").checked,
+        hide_image_enable: document.querySelector("#hide_image_enable").checked,
         cache_expire_seconds: document.querySelector("#cache_expire_seconds").value,
         shortcut_mode_1st: document.querySelector("#shortcut_mode_1st_0").checked ? 0 : 1,
         shortcut_mode_2nd: document.querySelector("#shortcut_mode_2nd").checked,
@@ -118,6 +119,7 @@ function restoreOptions() {
     browser.storage.local.get("tab_independent").then((result)=>{document.querySelector("#tab_independent").checked = result.tab_independent || false;});
     browser.storage.local.get("tab_mode_take_over").then((result)=>{document.querySelector("#tab_mode_take_over").checked = result.tab_mode_take_over || false;});
     browser.storage.local.get("context_menu_hide").then((result)=>{document.querySelector("#context_menu_hide").checked = result.context_menu_hide || false;});
+    browser.storage.local.get("hide_image_enable").then((result)=>{document.querySelector("#hide_image_enable").checked = result.hide_image_enable || false;});
     browser.storage.local.get("cache_expire_seconds").then((result)=>{document.querySelector("#cache_expire_seconds").value = result.cache_expire_seconds || 3600*24;});
     browser.storage.local.get("shortcut_mode_1st").then((result)=>{
         if( result.shortcut_mode_1st=="0" ) {

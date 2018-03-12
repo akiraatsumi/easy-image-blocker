@@ -123,6 +123,13 @@ Options.prototype = {
     //    return this.items["context_menu_hide"];
     //},
     /**
+     * コンテキストメニュー追加しない?
+     * @returns {boolean} true=追加しない
+     */
+    isEnableHideImage: function isEnableHideImage() {
+        return this.items["hide_image_enable"];
+    },
+    /**
      * 擬似キャッシュリストを読み出す
      * @returns {Array} リスト
      */
@@ -218,6 +225,9 @@ Options.prototype = {
         });
         browser.storage.local.get("context_menu_hide").then((result)=> {
             this.items["context_menu_hide"] = result.context_menu_hide || false;
+        });
+        browser.storage.local.get("hide_image_enable").then((result)=> {
+            this.items["hide_image_enable"] = result.hide_image_enable || false;
         });
         browser.storage.local.get("cache_list").then((result)=> {
             this.items["cache_list"] = result.cache_list || JSON.stringify([]);

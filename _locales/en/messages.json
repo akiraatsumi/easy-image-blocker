@@ -149,6 +149,12 @@
   "context_menu_hide_description": {
     "message": "Do not add items to the context menu."
   },
+  "hide_image_enable_title": {
+    "message": "Enable 'Hide image' function.(Experimental)"
+  },
+  "hide_image_enable_description": {
+    "message": "If the image has already been loaded, the 'Hide image' menu is displayed in the context menu."
+  },
   "need_restart_firefox" : {
     "message": "(need restart Firefox)"
   },

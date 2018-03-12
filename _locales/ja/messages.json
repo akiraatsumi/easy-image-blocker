@@ -149,6 +149,12 @@
   "context_menu_hide_description": {
     "message": "コンテキストメニューに拡張項目を追加しない"
   },
+  "hide_image_enable_title": {
+    "message": "画像非表示機能を有効にする(実験的機能)"
+  },
+  "hide_image_enable_description": {
+    "message": "画像読み込み済みの場合、コンテキストメニューに「画像を隠す」メニューを表示します"
+  },
   "need_restart_firefox" : {
     "message": "(Firefoxの再起動が必要)"
   },

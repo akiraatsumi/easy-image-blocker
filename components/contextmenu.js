@@ -74,7 +74,10 @@ ContextMenu.prototype = {
         blockedImage.replaceStatus(tabManage.getTabId(), blockedImage.NONE, blockedImage.HIDE);  // NONEも、
         blockedImage.replaceStatus(tabManage.getTabId(), blockedImage.BLOCKED, blockedImage.HIDE);  // BLOCKEDも、
         blockedImage.replaceStatus(tabManage.getTabId(), blockedImage.FORCE, blockedImage.HIDE); // FORCEもHIDEにする
-        browser.tabs.sendMessage(tabManage.getTabId(), {command: "hideall", alt: options.getAltStringConsideredPlaceholderType()});
+        browser.tabs.sendMessage(tabManage.getTabId(), {
+            command: "hideall",
+            alt: options.getAltStringConsideredPlaceholderType()
+        });
         // コンテキストメニューをLoad Allにする
         this.changeContextMenuToLoadAll();
     },
@@ -110,6 +113,7 @@ ContextMenu.prototype = {
 
     /**
      * コンテキストメニューを単画像非表示に切り替え
+     * (optionは呼び出し側(changeContextMenuToLoadSingle)で見てる)
      */
     changeContextMenuToHideSingle: function changeContextMenuToHideSingle() {
         this.CONTEXT_MODE = this.CONTEXT_MODE_HIDE_ONE;
@@ -122,10 +126,12 @@ ContextMenu.prototype = {
      * コンテキストメニューを全画像非表示に切り替え
      */
     changeContextMenuToHideAll: function changeContextMenuToHideAll() {
-        this.CONTEXT_MODE = this.CONTEXT_MODE_HIDE_ALL;
-        browser.contextMenus.update("loadimage", {
-            title: browser.i18n.getMessage("context_hideallimage")
-        });
+        if( options.isEnableHideImage() ) {  // optionで有効になっていれば処理
+            this.CONTEXT_MODE = this.CONTEXT_MODE_HIDE_ALL;
+            browser.contextMenus.update("loadimage", {
+                title: browser.i18n.getMessage("context_hideallimage")
+            });
+        }
     },
 
     /**
@@ -134,7 +140,7 @@ ContextMenu.prototype = {
     changeContextMenuToLoadSingle: function changeContextMenuToLoadSingle(src, haseibsrc) {
         this.IMAGE_URL = src;
         //if( blockedImage.isExistBlocked(tabManage.getTabId(), this.IMAGE_URL) ){
-        if( haseibsrc ){
+        if( haseibsrc || !options.isEnableHideImage() ){    // optionで有効になっていなければ'load'
             // ブロック済みなので reload を設定
             this.CONTEXT_MODE = this.CONTEXT_MODE_ONE;
             browser.contextMenus.update("loadimage", {

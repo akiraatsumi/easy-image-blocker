@@ -24,6 +24,8 @@ Easy Image Blocker can control to loading images. Images can be load from the co
 * CSS内で指定されている画像の読み込み制御には対応していません。<br />It does not support read control of images specified in CSS.
 
 ## 履歴(History)
+### ver. 3.1.1
+* Hide image機能の有効/無効を切り替えられるようにした。<br />Context menu of 'Hide image' can be switched to the enabel/disable.
 ### ver. 3.1.0
 * モード変更時のリロード処理の不具合修正。<br />Fix the bug for reload when mode changes.
 * ショートカットキーに対応。<br />Add the shorrtcut key function.

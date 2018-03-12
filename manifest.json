@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "EasyImageBlocker",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Easy Image Blocker is the Add-on to control the loading of the image. Images can be load from the context menu individually. You can specify the mode to load the image for each URL in the white list.",
   "default_locale": "en",
 
