@@ -161,7 +161,9 @@ function setSendMessageOnImages() {
         }
     }
 }
-window.onload = setSendMessageOnImages; // 遅れて読み込まれた素材を改めて定義
+// 遅れて読み込まれた素材を改めて定義
+//onload定義すると元のページのonloadが動かなくなってしまう window.onload = setSendMessageOnImages;
+window.addEventListener("load", function() { setSendMessageOnImages(); }, false);
 
 /**
  * EIB_ALT_NAMEが設定されているか否かを返す
@@ -176,7 +178,7 @@ function hasEibAlt(event) {
  * 右クリック時のimageの情報をbackgroundに渡す
  * @param event
  */
-document.onclick = function(event){
+document.addEventListener("click", function(event){
     let isright = (event.button == 2);
     let isImage = (event.target.nodeName=="IMG");
     if( isright ){
@@ -185,7 +187,7 @@ document.onclick = function(event){
             src: isImage ? getEibSrcUrl(event) : ""
         });
     }
-};
+}, false);
 
 //------------------------------------------------------------ connect to background
 // contentsを読み込んでからじゃ無いと相互にscriptと通信できないので、こちらからbackgroundにconnectionを張りに行く

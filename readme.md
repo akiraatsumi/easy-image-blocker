@@ -23,6 +23,8 @@ It has the following functions.
 * It does not support read control of images specified in CSS.
 
 ## History
+### ver. 3.1.2
+* Fixed the bug issue #1 - The Event(onload, click) in the original page is overwritten by add-on.
 ### ver. 3.1.1
 * Context menu of 'Hide image' can be switched to the enabel/disable.
 ### ver. 3.1.0
