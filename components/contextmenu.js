@@ -131,6 +131,9 @@ ContextMenu.prototype = {
             browser.contextMenus.update("loadimage", {
                 title: browser.i18n.getMessage("context_hideallimage")
             });
+        } else {
+            // content_scriptから来た時にLoadAllの動作をする
+            this.changeContextMenuToLoadAll();
         }
     },
 
