@@ -32,11 +32,14 @@ ModeManage.prototype = {
         LOAD_ALL: "icons/icon16_loadall.png"
     },
 
+    isModeSet: function isModeSet(tabid){
+        return (this.EIBMode[tabid] != null);
+    },
     getModeRaw: function getModeRaw(tabid){
         debug.log(modemanageTAG, `getModeRaw: ind=${options.isTabIndependent()}, tabid=${tabid}, mode=${this.EIBMode[tabid]}, last=${this.lastEIBMode}`);
         // もし未初期化ならデフォルトをセット
         if( this.lastEIBMode == null ) this.lastEIBMode = options.getModeInit();
-        if( this.EIBMode[tabid] == null ) this.EIBMode[tabid] = options.getModeInit();
+        if( !this.isModeSet(tabid) ) this.EIBMode[tabid] = options.getModeInit();
         // 値を返す
         return options.isTabIndependent() ? this.EIBMode[tabid] : this.lastEIBMode;
     },
@@ -121,7 +124,7 @@ ModeManage.prototype = {
     /** タブ毎のURL(host)を持っておく */
     setTabInfo: function setTabInfo(tabid, tabInfo){
         this.tabHost[tabid] = tabInfo.url.host;
-        updateToolbarIcon(this.getModeIcon(tabid), this.getModeString(tabid));
+        //updateToolbarIcon(this.getModeIcon(tabid), this.getModeString(tabid)); ここで必要?
     }
 };
 

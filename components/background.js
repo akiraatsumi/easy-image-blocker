@@ -2,12 +2,11 @@
 // todo: コンテキストメニューショートカットキー→webextenstions未対応→対応中らしい
 // todo: 日本語環境での動作確認
 
-var count = 0;
 var TAG = "background";
 
-function onError(error) {
-    debug.log(`Error: ${error}`);
-}
+//function onError(error) {
+//    debug.log(`Error: ${error}`);
+//}
 
 /**
  * 画像ファイルの読み込みを制御
@@ -111,8 +110,8 @@ browser.runtime.onConnect.addListener(
 // windowがクローズされる時にキャッシュを保存する
 //noinspection JSUnusedLocalSymbols
 browser.windows.onRemoved.addListener((windowId) => {
+    tabManage.saveTabInfo();
     cacheControl.deleteExpiredCache();
     cacheControl.saveCacheList();
     debug.log(TAG, "onWindowClose: cache close completed.");
 });
-

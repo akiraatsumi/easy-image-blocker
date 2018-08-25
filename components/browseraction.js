@@ -21,6 +21,8 @@ function handleClick() {
     if( isControlKeyPress ) {
         // modeup
         modeManage.upMode(tabManage.getTabId());
+        // Tab毎のモード更新
+        tabManage.updateTabList();
     }
 }
 

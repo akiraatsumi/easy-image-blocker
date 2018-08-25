@@ -35,15 +35,15 @@ CacheControl.prototype = {
         } else {
             for( let i=0; i<this.cacheList[len].length; i++){
                 if( this.cacheList[len][i][this.CACHE_ITEM_URL] == url ) {
-                    debug.log(cachectrlTAG,`isExistInCache: url=${this.cacheList[len][i][this.CACHE_ITEM_URL]}, time=${this.cacheList[len][i][this.CACHE_ITEM_DATE]}`);
+                    //debug.log(cachectrlTAG,`isExistInCache: url=${this.cacheList[len][i][this.CACHE_ITEM_URL]}, time=${this.cacheList[len][i][this.CACHE_ITEM_DATE]}`);
                     if( update ) {
                         // pushの時は既存ならtrueを返して日時更新
-                        debug.log(cachectrlTAG,`isExistInCache: update DATE`);
+                        //debug.log(cachectrlTAG,`isExistInCache: update DATE`);
                         this.cacheList[len][i][this.CACHE_ITEM_DATE] = Date.now();
                         found = true;
                     } else {
                         // pushじゃない時は期限切れならfalseを返す
-                        debug.log(cachectrlTAG,`isExistInCache: Expirerd? now=${(Date.now() - options.getCacheExpireSeconds() * 1000)}, time=${this.cacheList[len][i][this.CACHE_ITEM_DATE]}`);
+                        //debug.log(cachectrlTAG,`isExistInCache: Expirerd? now=${(Date.now() - options.getCacheExpireSeconds() * 1000)}, time=${this.cacheList[len][i][this.CACHE_ITEM_DATE]}`);
                         found = (this.cacheList[len][i][this.CACHE_ITEM_DATE] > (Date.now() - options.getCacheExpireSeconds() * 1000));
                     }
                     break;
@@ -72,14 +72,14 @@ CacheControl.prototype = {
     deleteExpiredCache: function deleteExpiredCache() {
         for( let j=0; j<this.cacheList.length; j++ ) {
             if( this.cacheList[j] != null ) {   // いきなり[52]とかあると0～51はnull
-                debug.log(cachectrlTAG, `deleteExpiredCache: j=${j}, length=${this.cacheList[j].length}`);
+                //debug.log(cachectrlTAG, `deleteExpiredCache: j=${j}, length=${this.cacheList[j].length}`);
                 for (let i = this.cacheList[j].length-1; i>=0; i--) {
-                    // cacheListは日時更新するので日付順にはなっていないので地道に1つずつ削除
+                    // cacheListは日時更新するため日付順にはなっていないので地道に1つずつ削除
                     if ( this.cacheList[j][i][this.CACHE_ITEM_DATE] < (Date.now() - options.getCacheExpireSeconds()*1000) ) {
                         this.cacheList[j].splice(i,1);
                     }
                 }
-                debug.log(cachectrlTAG, `deleteExpiredCache: deleted: length=${this.cacheList[j].length}`);
+                //debug.log(cachectrlTAG, `deleteExpiredCache: deleted: length=${this.cacheList[j].length}`);
             }
         }
     },

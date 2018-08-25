@@ -23,8 +23,15 @@ It has the following functions.
 * It does not support read control of images specified in CSS.
 
 ## History
+### ver. 3.1.4
+* Fixed the bug issue #4<br />
+The mode is not restored when the tab is automatically restored at the time of browser startup.
+### ver. 3.1.3
+* Fixed the bug issue #3<br />
+When the block is not correctly marked it will not be Load All Images on the context menu.
 ### ver. 3.1.2
-* Fixed the bug issue #1 - The Event(onload, click) in the original page is overwritten by add-on.
+* Fixed the bug issue #1<br />
+The Event(onload, click) in the original page is overwritten by add-on.
 ### ver. 3.1.1
 * Context menu of 'Hide image' can be switched to the enabel/disable.
 ### ver. 3.1.0

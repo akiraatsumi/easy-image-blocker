@@ -145,6 +145,22 @@ Options.prototype = {
         browser.storage.local.set({cache_list: this.items["cache_list"]});
     },
     /**
+     * 前回終了時のタブ毎のモードを読み出す
+     * @returns {Array} リスト
+     */
+    getTabList: function getTabList() {
+        return JSON.parse(this.items["tab_mode_list"]);
+    },
+    /**
+     * 終了時のタブ毎のモードを保存する
+     * @param list {Array} リスト
+     */
+    setTabList: function setTabList(list) {
+        this.items["tab_mode_list"] = JSON.stringify(list);
+        browser.storage.local.set({tab_mode_list: this.items["tab_mode_list"]});
+        debug.log(optionsTAG,'setTabList: list='+this.items["tab_mode_list"]);
+    },
+    /**
      * 擬似キャッシュ保存時間を取得する
      * @returns {int} 秒
      */
@@ -231,9 +247,11 @@ Options.prototype = {
         });
         browser.storage.local.get("cache_list").then((result)=> {
             this.items["cache_list"] = result.cache_list || JSON.stringify([]);
-            debug.log(optionsTAG,"cache_list loaded");
-            // 読めたのでcachecontrolに通知
-            cacheControl.initCacheList();
+            cacheControl.initCacheList();   // 読めたのでcachecontrolに通知
+        });
+        browser.storage.local.get("tab_mode_list").then((result)=> {
+            this.items["tab_mode_list"] = result.tab_mode_list || JSON.stringify([]);
+            tabManage.initTabInfo();        // 読めたのでtabmanagerに通知
         });
         browser.storage.local.get("cache_expire_seconds").then((result)=> {
             this.items["cache_expire_seconds"] = result.cache_expire_seconds || false;

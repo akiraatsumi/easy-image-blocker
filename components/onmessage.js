@@ -3,9 +3,9 @@
 var isControlKeyPress = false;
 var onmessageTAG = "OnMessage";
 
-function onError(error) {
-    debug.log(`Error: ${error}`);
-}
+//function onError(error) {
+//    debug.log(`Error: ${error}`);
+//}
 
 /**
  * backgroundに来るメッセージを一手に処理
@@ -56,6 +56,8 @@ function handleMessage(request, sender, sendResponse){
             if( mode >= 0 ) {
                 // モード変更
                 modeManage.setMode(tabManage.getTabId(), mode);
+                // Tab毎のモード更新
+                tabManage.updateTabList();
             }
             break;
         case "contextLoadOne":
@@ -82,6 +84,8 @@ function handleMessage(request, sender, sendResponse){
             } else {
                 modeManage.setMode(tabManage.getTabId(), request.mode);
             }
+            // Tab毎のモード更新
+            tabManage.updateTabList();
             break;
         case "setEibSrcDummy":
             debug.log(onmessageTAG, "setEibSrcDummy: name=" + request.name);
