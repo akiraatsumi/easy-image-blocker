@@ -104,18 +104,6 @@
   "context_loadallimages": {
     "message": "全画像読み込み"
   },
-  "mode_string_all_block": {
-    "message": "全てブロック\n(ctrl+クリックでモードUp)"
-  },
-  "mode_string_cache": {
-    "message": "キャッシュのみ読み込み"
-  },
-  "mode_string_this_site": {
-    "message": "外部の画像はブロック"
-  },
-  "mode_string_load_all": {
-    "message": "全読み込み"
-  },
   "restart_dialog_title": {
     "message": "Easy Image Blockerからのお知らせ:"
   },

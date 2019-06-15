@@ -23,6 +23,9 @@ It has the following functions.
 * It does not support read control of images specified in CSS.
 
 ## History
+### ver. 3.1.5
+* Changed how to get right-click event.
+* Corrected the text displayed as the description of the icon.
 ### ver. 3.1.4
 * Fixed the bug issue #4<br />
 The mode is not restored when the tab is automatically restored at the time of browser startup.

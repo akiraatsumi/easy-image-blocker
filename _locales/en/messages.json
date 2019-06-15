@@ -105,16 +105,16 @@
     "message": "Load All Images"
   },
   "mode_string_all_block": {
-    "message": "All blocks\n(ctrl+click then modeup)"
+    "message": "Easy Image Blocker"
   },
   "mode_string_cache": {
-    "message": "Load cached images only"
+    "message": "Easy Image Blocker"
   },
   "mode_string_this_site": {
-    "message": "Load images on this site only"
+    "message": "Easy Image Blocker"
   },
   "mode_string_load_all": {
-    "message": "Load all images"
+    "message": "Easy Image Blocker"
   },
   "restart_dialog_title": {
     "message": "Easy Image Blocker Notification:"
