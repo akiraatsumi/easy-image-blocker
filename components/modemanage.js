@@ -39,7 +39,9 @@ ModeManage.prototype = {
         debug.log(modemanageTAG, `getModeRaw: ind=${options.isTabIndependent()}, tabid=${tabid}, mode=${this.EIBMode[tabid]}, last=${this.lastEIBMode}`);
         // もし未初期化ならデフォルトをセット
         if( this.lastEIBMode == null ) this.lastEIBMode = options.getModeInit();
-        if( !this.isModeSet(tabid) ) this.EIBMode[tabid] = options.getModeInit();
+        if( !this.isModeSet(tabid) ) {
+            setMode(tabid, options.getModeInit());
+        }
         // 値を返す
         return options.isTabIndependent() ? this.EIBMode[tabid] : this.lastEIBMode;
     },
@@ -97,7 +99,7 @@ ModeManage.prototype = {
         this.lastEIBMode = mode;
         updateToolbarIcon(this.getModeIcon(tabid), this.getModeString(tabid));
         // リロード設定ONならリロードする
-        if( options.isReloadModeChanged() && oldMode != mode ){
+        if( options.isReloadModeChanged() && oldMode != mode && oldMode != undefined ){
             tabManage.reloadTab(tabid);
         }
     },
